@@ -394,7 +394,7 @@ section{padding-left:20px;}
 .servButtons div{
 	margin-left:10px;
 	border-radius:3px;
-	background:url(../img/bg/button.png) repeat-x;
+	background:#0A2648;
 	float:left;
 }
 
@@ -411,7 +411,7 @@ section{padding-left:20px;}
 }
 
 .selectedButton{
-	background:#0A2648;
+	background:url(../img/bg/button.png) repeat-x;
 	border-radius:3px;
 }
 
@@ -561,13 +561,17 @@ section{padding-left:20px;}
 .servBtnDiv{
 	width:64px;
 	height:34px;
-	background:url(../img/bg/sendButton.png) repeat-x;
+	background:#0A2648;
 	border-radius:5px;
 	border:none;
 	color:#FFFFFF;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;
 	font-weight:bold;
+}
+
+.servBtnDivBg{
+	background:url(../img/bg/sendButton.png) repeat-x;
 }
 
 .servFt{

@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div class="sideButton sideButtonSelected">
+            <div class="sideButton">
             	<div class="sideButtonRight">
                 	<div>
                     	<a href="#">
@@ -74,7 +74,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="sideButtonLeft sideButtonSel">
+                <div class="sideButtonLeft sideButtonNSel">
                 	<div>
                     	<a href="#">
 		                    <span class="sideButtonSpan"><img src="img/misc/sideCall.png"></span>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <div class="servButtons">
-                   	<a href="#"><div><p>Transferir</p></div></a>
+                   	<a href="#"><div><p class="selectedButton">Transferir</p></div></a>
                     <a href="#"><div><p class="selectedButton">Administrar</p></div></a>
                 </div>
             </div>
@@ -157,31 +157,31 @@
             	<p>Comparte tu saldo Amigo con otros Telcel. Ahora es m&aacute;s f&aacute;cil, r&aacute;pido y seguro.</p>
                 <p><b>Ingresa el Monto y N&uacute;mero Telcel (10 d&iacute;gitos) al cual deseas transferir Tiempo Aire:</b></p>
             </div>
-            <form name="form1" method="post" action="">
+            <form name="form1" method="post" action="index.html">
                 <div class="servAct">
                     <div>
                         <table>
                             <tr>
-                                <th>Monto:</th>
+                                <th><label for="monto">Monto:</label></th>
                                 <td>
-                                    <input type="text" name="a" id="a" class="montoInput">
+                                    <input type="text" name="monto" id="monto" class="montoInput">
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="montoValid" hidden="true">
                                 <th></th>
-                                <td><p>El monto es incorrecto. S&oacute;lo puedes transferir de 5 a 200 pesos sin centavos.</p></td>
+                                <td><label for"monto" class="error" style="display:none"><p>El monto es incorrecto. S&oacute;lo puedes transferir de 5 a 200 pesos sin centavos.</p></label></td>
                             </tr>
                         </table>
                         <table>
                             <tr>
-                                <th>N&uacute;mero de Celular:</th>
+                                <th><label for="seleccionar">N&uacute;mero de Celular:</label></th>
                                 <td>
-                                    <select name="a1" id="a1">
+                                    <select name="seleccionar" id="seleccionar">
                                       <option value="0">-- Seleccionar --</option>
                                     </select>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="sectionValid" hidden="true">
                                 <th></th>
                                 <td><p class="servActP">Campo Requerido.</p></td>
                             </tr>
@@ -190,7 +190,7 @@
                 </div>
                 <div class="servBtn">
                     <div>
-                        <input type="submit" value="Enviar" class="servBtnDiv">
+                        <input type="button" value="Enviar" class="servBtnDiv servBtnDivBg" id="sendButton">
                     </div>
                 </div>
 			</form>
