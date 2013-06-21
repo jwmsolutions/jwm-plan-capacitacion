@@ -9,12 +9,14 @@ $(document).ready(function() {
 		$(".sideButtonLeft",this).removeClass("sideButtonNSel");
 		$(".sideButtonLeft",this).addClass("sideButtonSel");
 		$(this).addClass("sideButtonSelected");
+		$(".sideButtonRight",this).removeClass("sideButtonRightBg");
 	});
 	
 	$(".sideButton").mouseleave(function(){
 		$(".sideButtonLeft",this).removeClass("sideButtonSel");
 		$(".sideButtonLeft",this).addClass("sideButtonNSel");
 		$(this).removeClass("sideButtonSelected");
+		$(".sideButtonRight",this).addClass("sideButtonRightBg");
 	});
 	
 	//General buttons - mouse over selectedButton
@@ -35,55 +37,146 @@ $(document).ready(function() {
 		$(this).removeClass("servBtnDivBg");
 	});
 	
+	//Enviar button - mouse over servBtnDiv
+	$(".servLastButtonDiv").mouseleave(function(){
+		$(this).addClass("servLastButtonBg");
+	});
+	
+	$(".servLastButtonDiv").mouseenter(function(){
+		$(this).removeClass("servLastButtonBg");
+	});
+	
 	//Selector - new number
-/*	var booln=false;
 	$("#seleccionar").change(function(){
 		if($(this).val()==="1"){
 			$("#cellNum").slideDown(200);
 			$("#cellNumConf").slideDown(200);
-			booln=true;
 		};
 		if($(this).val()!=="1"){
 			$("#cellNum").slideUp(200);
 			$("#cellNumConf").slideUp(200);
-			booln=false;
 		}
-	});*/
+	});
+	
+	//Alias - saving alias
+	$("#guardar").click(function(){
+		if($(this).is(":checked")){
+			$(".servAlias").addClass("servAliasBg");
+			$("#alias").fadeIn(200);
+			$("#aliasSpan").fadeIn(200);
+		} else{
+			$(".servAlias").removeClass("servAliasBg");
+			$("#alias").fadeOut(200);
+			$("#aliasSpan").fadeOut(200);
+		}
+	});
 	
 	/***** Validation *****/
 	// validation plugin
-/*	$.validator.addMethod('currency', function(value) {
+/*	$.validator.addMethod('numbValidation', function(value) {
 		var re = /^[0-9,]+\.\d{1,3}$/;
 		return !re.test(value);
 	}, '');*/
 	
-	$("form").validate({
+	///      jQuery Validator
+	$("#formAlias").validate({
+		errorContainer:"#validAlias",
+		rules:{
+			alias: {
+				required:true
+			}
+		},
+		messages:{
+			alias: false
+		}
+	});
+	
+	$.validator.addMethod('saldo', function(value) {
+		ok = false;
+		monto = $("#monto").val();
+		if (monto>50){
+			$("#saldoError").fadeIn(200);
+		}
+		else{
+			$("#saldoError").fadeOut(200);
+			ok = true;
+		}
+		return ok;
+	}, '');
+	
+	$.validator.addMethod('numcorrecto', function(value) {
+		ok = false;
+		numero = $("#numero").val();
+		if (numero==="1234567890"){
+			$("#numError").fadeOut(200);
+			ok = true;
+		}
+		else{
+			$("#numError").fadeIn(200);
+		}
+		return ok;
+	}, '');
+	
+	$.validator.addMethod('transfer', function(value) {
+		ok = false;
+		transfer = $("#seleccionar").val();
+		console.log(ok);
+		console.log(transfer);
+		if (transfer==="2"){
+			$("#transfError").fadeIn(200);
+		}
+		else{
+			$("#transfError").fadeOut(200);
+			ok = true;
+		}
+		return ok;
+	}, '');
+	
+	$.validator.addMethod('server', function(value) {
+		ok = false;
+		server = $("#seleccionar").val();
+		if (server==="3"){
+			$("#servError").fadeIn(200);
+		}
+		else{
+			$("#servError").fadeOut(200);
+			ok = true;
+		}
+		return ok;
+	}, '');
+	
+	$("#form1").validate({
 		rules: {
 			monto: {	
 				required: true,
 				number: true,
 				range: [5,200],
-				digits: true
+				digits: true,
+				saldo: true
 			},
 			seleccionar: {
 				required: true,
-				min: 1
+				min: 1,
+				transfer: true,
+				server: true
 			},
 			numero: {
-				required:true
+				required:true,
+				rangelength: [10, 10],
+				numcorrecto: true
 			},
 			confnumero: {
-				required:true
+				required:true,
+				equalTo:"#numero"	
 			}
 		},
 		messages: {
 			monto: "<p>El monto es incorrecto. S&oacute;lo puedes transferir de 5 a 200 pesos sin centavos.</p>",
 			seleccionar: "<p>Campo Requerido.</p>",
-			numero: "hi",
-			confnumero:"ho"
+			numero: false,
+			confnumero: false
 		}
 	});
-	
 	
 	
 	/*

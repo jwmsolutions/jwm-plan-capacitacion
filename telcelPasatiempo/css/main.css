@@ -237,9 +237,13 @@ aside{
 	width:40px;
 	height:100%;
 	display:table;
-	background:url(../img/bg/arrowBg.png) repeat-x;
+	background-color:#0A3E80;
 	border-bottom-right-radius:3px;
 	border-top-right-radius:3px;
+}
+
+.sideButtonRightBg{
+	background:url(../img/bg/arrowBg.png) repeat-x;
 }
 
 .sideButtonLeft div{
@@ -692,10 +696,14 @@ section{padding-left:20px;}
 	width:620px;
 }
 
-.servLastButton div{
+.servLastButtonBg{
+	background:url(../img/bg/button.png) repeat-x;
+}
+
+.servLastButtonDiv{
 	width:154px;
 	height:22px;
-	background:url(../img/bg/button.png) repeat-x;
+	background-color:#0A2648;
 	border-radius:3px;
 	margin:auto;
 	margin-top:9px;

@@ -3,7 +3,7 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <!-- saved from url=(0014)about:internet --> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta charset="utf-8">
@@ -61,12 +61,12 @@
                 	<div>
                     	<a href="#">
 		                    <span class="sideButtonSpan"><img src="img/misc/sideClock.png"></span>
-			               	<span class="sideButtonLeftSpan">Compra Tiempo Aire</span>
+			               	<span>Compra Tiempo Aire</span>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="sideButton">
+            <div class="sideButton sideButtonSelected">
             	<div class="sideButtonRight">
                 	<div>
                     	<a href="#">
@@ -74,11 +74,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="sideButtonLeft sideButtonNSel">
+                <div class="sideButtonLeft sideButtonSel">
                 	<div>
                     	<a href="#">
 		                    <span class="sideButtonSpan"><img src="img/misc/sideCall.png"></span>
-			               	<span class="sideButtonLeftSpan">Pasatiempo</span>
+			               	<span>Pasatiempo</span>
                         </a>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                 	<div>
                     	<a href="#">
 		                    <span class="sideButtonSpan"><img src="img/misc/sideIdeas.png"></span>
-			               	<span class="sideButtonLeftSpan">Ideas</span>
+			               	<span>Ideas</span>
                         </a>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                 	<div>
                     	<a href="#">
 		                    <span class="sideButtonSpan"><img src="img/misc/sideWorld.png"></span>
-			               	<span class="sideButtonLeftSpan">Viajero Internacional</span>
+			               	<span>Viajero Internacional</span>
                         </a>
                     </div>
                 </div>
@@ -149,30 +149,12 @@
                     </div>
                 </div>
                 <div class="servButtons">
-                   	<a href="#"><div><p class="selectedButton">Transferir</p></div></a>
+                   	<a href="#"><div><p>Transferir</p></div></a>
                     <a href="#"><div><p class="selectedButton">Administrar</p></div></a>
                 </div>
             </div>
             <div class="servCont">
-            	<div class="servAdvBord" hidden="true" id="numError">
-	               	<div class="servContdiv">
-	                	<div class="servContDivImg servContDivAlert"></div>
-	               		<div><p>El n&uacute;mero al que deseas transferir es incorrecto. Verifica e intenta de nuevo.</p></div>
-	               	</div>
-                </div>
-				<div class="servAdvBord" hidden="true" id="servError">
-	               	<div class="servContdiv">
-	                	<div class="servContDivImg servContDivClock"></div>
-	               		<div><p>Por el momento el servicio no est&aacute; disponible. Intenta m&aacute;s tarde.</p></div>
-	               	</div>
-                </div>
-                <div class="servAdvBord" hidden="true" id="saldoError">
-                	<div class="servContdiv">
-	                	<div class="servContDivImg servContDivClock"></div>
-	               		<div><p>Tu saldo disponible para transferir: "+ saldo +"pesos. <br><b>El saldo promocional no es transferible, no hay aclaraciones por errores tecleados en el n&uacute;mero.</b></p></div>
-	            	</div>
-                </div>
-                <div class="servAdvBord" hidden="true" id="transfError">
+            	<div class="servAdvBord">
 	               	<div class="servContdiv">
 	                	<div class="servContDivImg servContDivAlert"></div>
 	               		<div><p>El Tel&eacute;fono destino ha excedido el n&uacute;mero de transferencias permitidas en el mes.</p></div>
@@ -181,12 +163,12 @@
             	<p>Comparte tu saldo Amigo con otros Telcel. Ahora es m&aacute;s f&aacute;cil, r&aacute;pido y seguro.</p>
                 <p><b>Ingresa el Monto y N&uacute;mero Telcel (10 d&iacute;gitos) al cual deseas transferir Tiempo Aire:</b></p>
             </div>
-			<form id="form1" name="form1" method="post" action="index.html">
+            <form>
                 <div class="servAct">
                     <div>
                         <table>
                             <tr>
-                                <th><label for="monto">Monto:</label></th>
+                                <th>Monto:</th>
                                 <td>
                                     <input type="text" name="monto" id="monto" class="montoInput">
                                 </td>
@@ -194,28 +176,26 @@
                         </table>
                         <table>
                             <tr>
-                                <th><label for="seleccionar">N&uacute;mero de Celular:</label></th>
+                                <th>N&uacute;mero de Celular:</th>
                                 <td>
-                                    <select name="seleccionar" id="seleccionar">
-                                      <option value="0">-- Seleccionar --</option>
-                                      <option value="1">Nuevo</option>
-                                      <option value="2">Marta</option>
-                                      <option value="3">Server</option>
+                                    <select name="selection" id="selection" value="0">
+                                        <option value="0">-- Seleccionar --</option>
+                                        <option value="1">Nuevo</option>
                                     </select>
                                 </td>
                             </tr>
                         </table>
-                        <table hidden="true" id="cellNum">
+                        <table>
                             <tr>
-                                <th><label for="numero"><b>N&uacute;mero:</b></label></th>
+                                <th><b>N&uacute;mero:</b></th>
                                 <td>
                                     <input type="text" name="numero" id="numero"><b>(10 d&iacute;gitos)</b>
                                 </td>
                             </tr>
                         </table>
-                        <table hidden="true" id="cellNumConf">
+                        <table>
                             <tr>
-                                <th><label for="confnumero"><b>Confirmar N&uacute;mero:</b></label></th>
+                                <th><b>Confirmar N&uacute;mero:</b></th>
                                 <td>
                                     <input type="text" name="confnumero" id="confnumero">
                                 </td>
@@ -225,10 +205,10 @@
                 </div>
                 <div class="servBtn">
                     <div>
-                        <input type="submit" value="Enviar" class="servBtnDiv servBtnDivBg" id="sendButton">
+                        <input type="submit" value="Enviar" class="servBtnDiv">
                     </div>
                 </div>
-          </form>
+			</form>
           <div class="servFt">
             	<p>Consulta las <a href="#">Condiciones de Uso</a> de Pasatiempo a trav&eacute;s de internet.</p>
           </div>
@@ -239,22 +219,20 @@
         	<div>
 	        	<p>&copy; 2003 - 2011 Radiomovil Dipsa S.A. de C.V. Todos los derechos reservados. :: <a href="#">Politicas de Privacidad</a> :: <a href="#">T&eacute;rminos y Condiciones de uso </a> :: </p>
 	        </div>
-            <img src="img/misc/footerVerified.png" alt="">
+            <img src="img/misc/footerVerified.png">
         </div>
     </footer>
     <div class="banner">
     	<img src="img/misc/footerBanner.png">
-    <div>
-      	<h4><a href="#">Ayuda en L&iacute;nea &rsaquo;&rsaquo;</a></h4>
-       	<p>Contacta a un Asesor en l&iacute;nea de 07:00 a 22:00 hrs. Hora Cd. de M&eacute;xico.</p>
+        <div>
+            <h4><a href="#">Ayuda en L&iacute;nea &rsaquo;&rsaquo;</a></h4>
+            <p>Contacta a un Asesor en l&iacute;nea de 07:00 a 22:00 hrs. Hora Cd. de M&eacute;xico.</p>
+        </div>
     </div>
-</div>
 	<div class="bottomLine"></div>
 	<!-- Leave this scripts at the bottom just before the body close tag -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-    <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script src="jquery.h5validate.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/engine.js"></script>
 </body>
