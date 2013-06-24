@@ -91,59 +91,6 @@ $(document).ready(function() {
 		}
 	});
 	
-	$.validator.addMethod('saldo', function(value) {
-		ok = false;
-		monto = $("#monto").val();
-		if (monto>50){
-			$("#saldoError").fadeIn(200);
-		}
-		else{
-			$("#saldoError").fadeOut(200);
-			ok = true;
-		}
-		return ok;
-	}, '');
-	
-	$.validator.addMethod('numcorrecto', function(value) {
-		ok = false;
-		numero = $("#numero").val();
-		if (numero==="1234567890"){
-			$("#numError").fadeOut(200);
-			ok = true;
-		}
-		else{
-			$("#numError").fadeIn(200);
-		}
-		return ok;
-	}, '');
-	
-	$.validator.addMethod('transfer', function(value) {
-		ok = false;
-		transfer = $("#seleccionar").val();
-		console.log(ok);
-		console.log(transfer);
-		if (transfer==="2"){
-			$("#transfError").fadeIn(200);
-		}
-		else{
-			$("#transfError").fadeOut(200);
-			ok = true;
-		}
-		return ok;
-	}, '');
-	
-	$.validator.addMethod('server', function(value) {
-		ok = false;
-		server = $("#seleccionar").val();
-		if (server==="3"){
-			$("#servError").fadeIn(200);
-		}
-		else{
-			$("#servError").fadeOut(200);
-			ok = true;
-		}
-		return ok;
-	}, '');
 	
 	$("#form1").validate({
 		rules: {
@@ -151,19 +98,17 @@ $(document).ready(function() {
 				required: true,
 				number: true,
 				range: [5,200],
-				digits: true,
-				saldo: true
+				digits: true
 			},
 			seleccionar: {
 				required: true,
-				min: 1,
-				transfer: true,
-				server: true
+				min: 1
 			},
 			numero: {
 				required:true,
+				number: true,
 				rangelength: [10, 10],
-				numcorrecto: true
+				digits: true
 			},
 			confnumero: {
 				required:true,
@@ -173,8 +118,16 @@ $(document).ready(function() {
 		messages: {
 			monto: "<p>El monto es incorrecto. S&oacute;lo puedes transferir de 5 a 200 pesos sin centavos.</p>",
 			seleccionar: "<p>Campo Requerido.</p>",
-			numero: false,
-			confnumero: false
+			numero: {
+				required: "<p>Campo Requerido.</p>",
+				number: "<p>Debes introducir un n&uacute;mero de 10 d&iacute;gitos.</p>",
+				digits: "<p>Debes introducir un n&uacute;mero de 10 d&iacute;gitos.</p>",
+				rangelength: "<p>Debes introducir un n&uacute;mero de 10 d&iacute;gitos.</p>"
+			},
+			confnumero: {
+				required: "<p>Campo Requerido.</p>",
+				equalTo: "<p>Los campos no son iguales.</p>"
+			}
 		}
 	});
 	
@@ -233,6 +186,7 @@ $(document).ready(function() {
 	*/
 	
 	// Numeric only control handler
+	/*
 	jQuery.fn.ForceNumericOnly =
 	function()
 	{
@@ -259,6 +213,6 @@ $(document).ready(function() {
 	
 	$("#monto").ForceNumericOnly();
 	$("#numero").ForceNumericOnly();
-	$("#confnumero").ForceNumericOnly();
+	$("#confnumero").ForceNumericOnly();*/
 	
 });

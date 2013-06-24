@@ -58,6 +58,7 @@ header {
 	text-align:right;
 	color:#FFF;
 	font-size:11px;
+	width:600px;
 }
 
 .leftNav{
@@ -249,6 +250,7 @@ aside{
 .sideButtonLeft div{
 	display:table-cell;
 	height:100%;
+	
 }
 
 .sideButtonRight div{
@@ -505,11 +507,12 @@ section{padding-left:20px;}
 
 .servAct div{
 	padding-top:32px;
+	padding-left:32px;
 }
 
 .servAct div table{
 	margin-bottom:24px;
-	margin-left:32px;
+
 }
 
 .servAct table tr td{
