@@ -75,7 +75,6 @@ header {
 	display:table-cell;
 	vertical-align:middle;
 }
-
 .centerNav{
 	margin-top:17px;
 	display:table-cell;
@@ -100,6 +99,8 @@ header {
 }
 
 .centerNav span {
+	padding:0px;
+	margin:0px;
 	height:100%;
 	display:table-cell;
 	vertical-align:middle;
@@ -112,7 +113,7 @@ header {
 }
 
 .rightNav{
-	float:right;
+	float:left;
 	margin-top:17px;
 	width:163px;
 	height:39px;
@@ -145,18 +146,16 @@ header {
 	box-shadow: 0 1px 1px rgba(0,0,0,0.25);
 	min-height:440px;
 }
-
 .headDiv{
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
 	width:980px;
 	background:url(../img/bg/headerBg.png) repeat-x;
-	margin-top:19px;
 	height:51px;
 	overflow: hidden;
 }
-
 .headDiv ul{
+	margin-top:0px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
 	color:#0A3E7F;
@@ -164,17 +163,20 @@ header {
 	text-align: left;
     display:table;
     overflow: hidden;
+	list-style:none;
+	padding-left:0px;
 }
 
-.headDiv ul li {
+.headDiv ul li {	
 	overflow: hidden;
+	display:block;
 	float:left;
 	background:url(../img/misc/menuLine.png) right center no-repeat;
 }
 
 .headDiv a{
 	display:block;
-	padding:16px 45px;
+	padding:16px 47px;
 	color:#0A3E7F;
 }
 
@@ -191,6 +193,7 @@ header {
 }
 
 .headSelectedDiv a{
+	padding:12px 45px;
 	color:#666666;
 	text-decoration:none;
 }
@@ -227,7 +230,7 @@ aside{
 	float:left;
 	width:258px;
 	height:39px;
-	display:table;
+	display:inline-block;
 	border-right:none;
 	border-bottom-left-radius:5px;
 	border-top-left-radius:5px;
@@ -237,7 +240,7 @@ aside{
 	float:right;
 	width:40px;
 	height:100%;
-	display:table;
+	display:inline-block;
 	background-color:#0A3E80;
 	border-bottom-right-radius:3px;
 	border-top-right-radius:3px;
@@ -246,43 +249,51 @@ aside{
 .sideButtonRightBg{
 	background:url(../img/bg/arrowBg.png) repeat-x;
 }
-
-.sideButtonLeft div{
-	display:table-cell;
-	height:100%;
-	
-}
-
+/*********************************************/
 .sideButtonRight div{
-	display:table-cell;
+	display:inline-block;
 	height:100%;
 }
 
-.sideButton a{
+.sideButtonRight a{
 	height:100%;
-	display:table;
+	width:100%;
+	display:inline-block;
+}
+
+.sideButtonLeft{
+	display:inline-block;
+	height:39px;
+}
+
+.sideButtonLeft a{
 	color:#000;
+	height:39px;
+	width:100%;
+	display:inline-block;
 }
-
+/**********************************************/
 .sideButtonLeftSpan{
 	width:204px;
 }
 
 .sideButtonLeft span{
 	min-width:55px;
-	height:100%;
+	height:39px;
 	display:table-cell;
 	vertical-align:middle;
 }
 
 .sideButtonRight span{
-	min-width:40px;
-	height:100%;
+	padding-top:8px;
+	width:40px;
 	display:table-cell;
 	vertical-align:middle;
 }
 
 .sideButtonSpan{
+	display:inline-block;
+	width:55px;
 	text-align:center;
 }
 
@@ -328,16 +339,19 @@ h3{
 }
 
 .helpBox div p{
+	margin:0px;
 	font-size:13px;
 }
 
 .helpBox div h2{
+	margin:0px;
 	margin-top:5px;
 	font-size:19px;
 	font-weight:bold;
 }
 
 .helpBox div h1{
+	margin:0px;
 	font-size:27px;
 	font-weight:bold;
 }
@@ -354,13 +368,25 @@ section{padding-left:20px;}
 	margin-bottom:13px;
 }
 
+.servTitle ul{
+	margin-top:0px;
+	padding-left:0px;
+	display:table;
+	text-align: left;
+	list-style:none;
+	margin-bottom:0px;
+}
+
 .servTitle ul li{
-	min-height:100%;
-	display:table-cell;
+	display:block;
+	float:left;
 	vertical-align:middle;
 }
 
+section p{	margin:0px;}
+
 .servTitle ul li p{
+	margin:0px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:20px;
 	font-weight:bold;
@@ -760,7 +786,7 @@ footer{
 .banner{
 	clear:both;
 	width:350px;
-	height:30px;
+	height:35px;
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
 	background:#505050;
@@ -777,12 +803,14 @@ footer{
 }
 
 .banner div{
+	margin:0px;
 	color:#FFFFFF;
 	font-family:Arial, Helvetica, sans-serif;
 	margin-top:6px;
 }
 
 .banner div h4{
+	margin:0px;
 	font-size:14px;
 	font-weight:bold;
 }
@@ -792,6 +820,7 @@ footer{
 }
 
 .banner div p{
+	margin:0px;
 	font-size:9px;
 }
 

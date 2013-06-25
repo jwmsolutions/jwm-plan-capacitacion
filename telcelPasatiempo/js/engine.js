@@ -91,7 +91,6 @@ $(document).ready(function() {
 		}
 	});
 	
-	
 	$("#form1").validate({
 		rules: {
 			monto: {	
@@ -130,7 +129,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-	
 	
 	/*
 	var keyBlur = false;
