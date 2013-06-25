@@ -1,0 +1,878 @@
+/* This file is for adding your website's main styles */
+/****************************************************** Typo Styles *****************************************************/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+a {
+  text-decoration: none;
+}
+input[type=text] {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+textarea {
+  margin: 0;
+}
+input[type=text],
+textarea:focus {
+  outline: none;
+}
+/****************************************************** Main Styles *****************************************************/
+{ box-sizing: border-box; }
+
+a {
+	text-decoration:none;
+	color:#FFF;
+	font-weight:bold;
+}
+
+/*html{height:100%}*/
+
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	background:#E6E6E6; 
+	height:100%;
+}
+
+
+/***** Header *****/
+header {
+	width:980px;
+	height:74px;
+	background:url(../img/bg/mainHeader.png) repeat-x;
+	margin:auto;
+	margin-top:20px;
+	border-radius:5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.20);
+}
+
+.logo{
+	float:left;
+	margin-left:20px;
+	margin-top:15px;
+}
+
+.topNav{
+	float:right;
+	text-align:right;
+	color:#FFF;
+	font-size:11px;
+	width:600px;
+}
+
+.leftNav{
+	width:255px;
+	height:39px;
+	background:url(../img/misc/headerLine.png) right center no-repeat;
+	float:left;
+	margin-top:17px;
+	display:table;
+}
+
+.leftNav p{
+	padding-right:18px;
+	display:table-cell;
+	vertical-align:middle;
+}
+.centerNav{
+	margin-top:17px;
+	display:table-cell;
+	width:158px;
+	height:39px;
+	background:url(../img/misc/headerLine.png) right center no-repeat;
+	text-align:center;
+	vertical-align:middle;
+	float:left;
+}
+
+.centerNav > div{
+	height:100%;
+	display:inline-block;
+}
+
+.centerNav a{
+	height:100%;
+	margin:auto;
+	float:left;
+	display:table;
+}
+
+.centerNav span {
+	padding:0px;
+	margin:0px;
+	height:100%;
+	display:table-cell;
+	vertical-align:middle;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+.centerNav p{
+	font-size:11px;
+}
+
+.rightNav{
+	float:left;
+	margin-top:17px;
+	width:163px;
+	height:39px;
+	margin-left:15px;
+}
+
+.rightNavBg {
+	background:url(../img/misc/userMessage.png) left center no-repeat;
+}
+
+.rightNav p{
+	width:163px;
+	height:39px;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.rightNav p b {font-weight:bold;}
+
+/*****Main Div Header******/
+
+.mainDiv{
+	width:980px; 
+	margin:auto; 
+	margin-top:19px;
+	clear:both; 
+	background:#FFFFFF;
+	border-radius:5px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+	min-height:440px;
+}
+.headDiv{
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	width:980px;
+	background:url(../img/bg/headerBg.png) repeat-x;
+	height:51px;
+	overflow: hidden;
+}
+.headDiv ul{
+	margin-top:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#0A3E7F;
+	font-weight:bold;
+	text-align: left;
+    display:table;
+    overflow: hidden;
+	list-style:none;
+	padding-left:0px;
+}
+
+.headDiv ul li {	
+	overflow: hidden;
+	display:block;
+	float:left;
+	background:url(../img/misc/menuLine.png) right center no-repeat;
+}
+
+.headDiv a{
+	display:block;
+	padding:16px 47px;
+	color:#0A3E7F;
+}
+
+.lastMenuDiv{
+	background:none !important;
+}
+
+.headSelectedDiv{
+	margin-top:10px;
+	background: #FFFFFF !important;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	box-shadow: 1px 0 1px rgba(0,0,0,0.25);
+}
+
+.headSelectedDiv a{
+	padding:12px 45px;
+	color:#666666;
+	text-decoration:none;
+}
+
+/****** Side Bar ******/
+/***     options    ***/
+aside{
+	margin-top:19px;
+	margin-right:20px;
+	width:300px;
+	float:right;
+}
+
+.sideButton{
+	width:100%;
+	height:41px;
+	margin-bottom:8px;
+	background:url(../img/bg/asideOptionsBg.png) repeat-x;
+}
+
+.sideButtonSelected{
+	background:url(../img/bg/asideOptSelectedBg.png) repeat-x;
+}
+
+.sideButtonNSel{
+	border:1px solid #CCCCCC;	
+}
+
+.sideButtonSel{
+	border:1px solid #0C4081;
+}
+
+.sideButtonLeft{
+	float:left;
+	width:258px;
+	height:39px;
+	display:inline-block;
+	border-right:none;
+	border-bottom-left-radius:5px;
+	border-top-left-radius:5px;
+}
+
+.sideButtonRight{
+	float:right;
+	width:40px;
+	height:100%;
+	display:inline-block;
+	background-color:#0A3E80;
+	border-bottom-right-radius:3px;
+	border-top-right-radius:3px;
+}
+
+.sideButtonRightBg{
+	background:url(../img/bg/arrowBg.png) repeat-x;
+}
+/*********************************************/
+.sideButtonRight div{
+	display:inline-block;
+	height:100%;
+}
+
+.sideButtonRight a{
+	height:100%;
+	width:100%;
+	display:inline-block;
+}
+
+.sideButtonLeft{
+	display:inline-block;
+	height:39px;
+}
+
+.sideButtonLeft a{
+	color:#000;
+	height:39px;
+	width:100%;
+	display:inline-block;
+}
+/**********************************************/
+.sideButtonLeftSpan{
+	width:204px;
+}
+
+.sideButtonLeft span{
+	min-width:55px;
+	height:39px;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.sideButtonRight span{
+	padding-top:8px;
+	width:40px;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.sideButtonSpan{
+	display:inline-block;
+	width:55px;
+	text-align:center;
+}
+
+/***   help   ***/
+
+h3{
+	margin-top:16px;
+	float:left;
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#0A3E7F;
+	font-weight:bold;
+	margin-bottom:7px;
+}
+
+.helpBox{
+	clear:both;
+	width:300px;
+	height:100px;
+	border-radius:5px;
+	border:1px solid #CCCCCC;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333333;
+}
+
+.bannerIcon{
+	float:left;
+}
+
+.bannerIcon div{
+	height: 100px;
+	width:80px;
+	display: table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.bannerText div{
+	height: 100px;
+	display: table-cell;
+	vertical-align:middle;
+	text-align:left;
+}
+
+.helpBox div p{
+	margin:0px;
+	font-size:13px;
+}
+
+.helpBox div h2{
+	margin:0px;
+	margin-top:5px;
+	font-size:19px;
+	font-weight:bold;
+}
+
+.helpBox div h1{
+	margin:0px;
+	font-size:27px;
+	font-weight:bold;
+}
+
+.helpBox div h1 a{
+	color:#333333;
+}
+
+/***   Main Content   ***/
+section{padding-left:20px;}
+
+.servTitle{
+	margin-top:10px;
+	margin-bottom:13px;
+}
+
+.servTitle ul{
+	margin-top:0px;
+	padding-left:0px;
+	display:table;
+	text-align: left;
+	list-style:none;
+	margin-bottom:0px;
+}
+
+.servTitle ul li{
+	display:block;
+	float:left;
+	vertical-align:middle;
+}
+
+section p{	margin:0px;}
+
+.servTitle ul li p{
+	margin:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	color:#999999;
+}
+
+.servTitle ul li p span{
+	color:#333333;
+}
+
+.servSubTitle{
+	width:620px;
+	height:28px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.servSubTitle div p{
+	font: Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	color:#0A3E7F;
+}
+
+.servSubTitleFloat{float:left;}
+
+.servSubTitleFloat div{
+	height:28px;
+	display: table-cell;
+	vertical-align:middle;
+	text-align:left;
+}
+
+.servButtons{
+	float:right;
+}
+
+.servButtons div{
+	margin-left:10px;
+	border-radius:3px;
+	float:left;
+	height:22px;
+	width:75px;
+}
+
+.servButtons div p{
+	margin-top:3px;
+	display:table-cell;
+	height:22px;
+	width:75px;
+	text-align:center;
+	vertical-align:middle;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+}
+
+.selectedButtonBg{	background:#0A2648;}
+
+.selectedButton{
+	background:url(../img/bg/button.png) repeat-x;
+	border-radius:3px;
+}
+
+.servCont{
+	display:table;
+	width:620px;
+}
+
+.servAdvBord{
+	margin-top:10px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+	background:#EDF6F8;
+}
+
+.servContdiv{
+	width:620px;
+	height:50px;
+	border-radius:5px;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.return{
+	margin-left:38px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#333333;
+	padding-bottom:14px;
+}
+
+.return a{
+	color:#3E96EB;
+	text-decoration:underline;
+	font-weight:bold;
+}
+
+.servContDivImg{
+	float:left;
+	width:43px;
+	height:100%;
+	background:url(../img/misc/ok.png) no-repeat center;
+}
+
+.servContDivAlert{
+	background:url(../img/misc/alert.png) no-repeat center;
+}
+
+.servContDivClock{
+	background:url(../img/misc/clock.png) no-repeat center;
+}
+
+.servCont div p{
+	margin-top:3px;
+	float:left;
+	font-weight:bold;
+	line-height:125%;
+}
+
+.servCont div p b{
+	font-weight:normal;
+}
+
+.servCont p{
+	padding-top:11px;
+	padding-bottom:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#333333;
+}
+.servCont p b {font-weight:bold;}
+
+.servAct{
+	border-top:1px solid #CCCCCC;
+	width:620px;
+	min-height:132px;
+	border-bottom:1px dashed #CCCCCC;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#333333;
+}
+
+.servAct table tr th{
+	width:130px;
+	text-align:right;
+}
+
+.servAct div{
+	padding-top:32px;
+	padding-left:32px;
+}
+
+.servAct div table{
+	margin-bottom:24px;
+
+}
+
+.servAct table tr td{
+	padding-left:10px;
+}
+
+.servActP{
+	padding-bottom:0px;
+}
+
+.montoInput{
+	width:90px !important;
+}
+
+.servAct table tr td select{
+	width:206px;
+}
+.servAct table tr td input{
+	width:207px;
+}
+
+.servAct table tr td b{
+	padding-left:10px;
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#9D9D99;
+}
+
+.servAct div p{
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#0A3E7F;
+	margin-top:4px;
+}
+
+.servAct div b{
+	font-weight:normal;
+}
+
+.servBtn{
+	width:620px;
+	height:54px;
+	display:table-cell;
+	background:#F6F6F6;
+	vertical-align:middle;
+}
+
+.servBtn div{
+	width:620px;
+	text-align:center;
+}
+
+.servBtnDiv{
+	width:64px;
+	height:34px;
+	background:#0A2648;
+	border-radius:5px;
+	border:none;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.servBtnDivBg{
+	background:url(../img/bg/sendButton.png) repeat-x;
+}
+
+.servFt{
+	width:620px;
+	height:58px;
+	color:#666666;
+	font-size:11px;
+}
+
+.servFt p{
+	margin-top:7px;
+	margin-left:3px;
+}
+
+.servFt p a{
+	color:#3E96EF;
+}
+
+.servResumen{
+	margin-top:22px;
+	font-size:13px;
+	color:#333333;
+	width:620px;
+}
+
+.servResumen td{
+	color:#333333;
+	width:166px;
+	text-align:right;
+}
+
+.servResumen th{
+	width:454px;
+	text-align:left;
+}
+
+.servResumen th > p{
+	padding-left:18px;
+	color:#0A3E7F;
+	font-weight:bold;
+}
+
+.servResumen > table p {
+	margin-top:9px;
+	padding-bottom:9px;
+	border-bottom:dashed 1px #CCCCCC;
+}
+
+.alt th, .alt td{
+	background-color:#F9F9F9;
+}
+
+.servResumen h6{
+	font-weight:bold; 
+	padding-left:3px;
+	padding-bottom:18px;
+	border-bottom:dashed 1px #CCCCCC;
+}
+
+.servAlias{
+	width:620px;
+	border-bottom:dashed 1px #CCCCCC;
+}
+
+.servAliasBg{
+	background-color:#EDF6F8;
+}
+
+.servAlias span{
+	display:inline-block;
+	padding-top:12px;
+}
+
+.servAlias div{
+	padding-top:7px;
+	padding-bottom:5px;
+	font-size:13px;
+}
+
+.servAlias th{
+	width:174px;
+	text-align:right;
+	font-weight:bold;
+	color:#333333;
+}
+
+.servAlias p{
+	font-size:11px;
+}
+
+.servAlias td{
+	padding-bottom:5px;
+	padding-left:10px;
+	color:#0A3E7F;
+}
+
+.servBtnAlias{
+	width:64px;
+	height:22px;
+	background:url(../img/bg/sendButton.png) repeat-x;
+	border-radius:3px;
+	border:none;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin-left:10px;
+	margin-top:15px;
+}
+
+.servAliasInput form :first-child {
+	width:170px;
+	height:22px;
+}
+
+.servLastButton{
+	min-height:51px;
+	width:620px;
+}
+
+.servLastButtonBg{
+	background:url(../img/bg/button.png) repeat-x;
+}
+
+.servLastButtonDiv{
+	width:154px;
+	height:22px;
+	background-color:#0A2648;
+	border-radius:3px;
+	margin:auto;
+	margin-top:9px;
+	margin-right:0px;
+	display:table;
+}
+
+.servLastButton a{
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	font-size:11px;
+	font-weight:bold;
+}
+
+/*********** Footer ************/
+footer{
+	width:980px;
+	height:100%;
+	margin:auto;
+}
+
+.footerDiv{
+	margin-top:19px;
+	height:36px;
+}
+
+.footerDiv div{
+	float:left;
+}
+
+.footerDiv div p{
+	display:table-cell;
+	height:36px;;
+	vertical-align:middle;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666666;
+	font-size:11px;
+}
+
+.footerDiv div p a{
+	color:#3E96ED;
+}
+
+.footerDiv img{
+	float:right;
+	margin-right:7px;
+}
+
+/****** Bottom Line *******/
+.banner{
+	clear:both;
+	width:350px;
+	height:35px;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	background:#505050;
+	position:fixed;
+	bottom:10px;
+	right:38px;
+}
+
+.banner img{
+	float:left;
+	margin-top:1px;
+	margin-left:1px;
+	margin-right:4px;
+}
+
+.banner div{
+	margin:0px;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-top:6px;
+}
+
+.banner div h4{
+	margin:0px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.banner div h4 a{
+	color:#FFFFFF;
+}
+
+.banner div p{
+	margin:0px;
+	font-size:9px;
+}
+
+.bottomLine{
+	height:10px;
+	width:100%;
+	background:#505050;
+	position:fixed;
+	bottom:0px;
+}
+
+
+/* Responsive Styles */
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+ 
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+     only screen and (min-resolution:144dpi) {
+
+}
+
+/* Firefox CSS hacks */
+@-moz-document url-prefix() {
+  
+}
+/* IE 6,7,8, CSS hacks */
+.lt-ie9 .clearfix {
+  min-height: 1%;
+}
+/*.lt-ie9 {behavior:url(js/PIE.htc);} This line is for adding selectors that have CSS3 rules to work in IE
+.lt-ie9 {position:relative;} This line is for adding selectors with bugs rendering CSS3 PIE styles */
+/* IE9 CSS hacks */
+/*.ie9 {}*/
+/* IE7 CSS hacks */
+/*.lt-ie8{}*/
