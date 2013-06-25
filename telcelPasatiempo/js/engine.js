@@ -22,10 +22,13 @@ $(document).ready(function() {
 	//General buttons - mouse over selectedButton
 	$(".selectedButton").mouseleave(function(){
 		$(this).addClass("selectedButton");
+		$(this).removeClass("selectedButtonBg");
 	});
 	
 	$(".selectedButton").mouseenter(function(){
 		$(this).removeClass("selectedButton");
+		$(this).addClass("selectedButtonBg");
+		
 	});
 	
 	//Enviar button - mouse over servBtnDiv

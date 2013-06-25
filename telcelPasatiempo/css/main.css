@@ -426,11 +426,13 @@ section p{	margin:0px;}
 .servButtons div{
 	margin-left:10px;
 	border-radius:3px;
-	background:#0A2648;
 	float:left;
+	height:22px;
+	width:75px;
 }
 
 .servButtons div p{
+	margin-top:3px;
 	display:table-cell;
 	height:22px;
 	width:75px;
@@ -441,6 +443,8 @@ section p{	margin:0px;}
 	font-size:11px;
 	font-weight:bold;
 }
+
+.selectedButtonBg{	background:#0A2648;}
 
 .selectedButton{
 	background:url(../img/bg/button.png) repeat-x;
